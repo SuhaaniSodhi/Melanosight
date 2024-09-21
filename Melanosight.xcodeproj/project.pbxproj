@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		945BB7BD2C9F2CF10005F6E8 /* MelanosightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7BC2C9F2CF10005F6E8 /* MelanosightApp.swift */; };
+		945BB7BF2C9F2CF10005F6E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7BE2C9F2CF10005F6E8 /* ContentView.swift */; };
+		945BB7C12C9F2CF30005F6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945BB7C02C9F2CF30005F6E8 /* Assets.xcassets */; };
+		945BB7C42C9F2CF30005F6E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945BB7C32C9F2CF30005F6E8 /* Preview Assets.xcassets */; };
+		945BB7CE2C9F2CF30005F6E8 /* MelanosightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7CD2C9F2CF30005F6E8 /* MelanosightTests.swift */; };
+		945BB7D82C9F2CF30005F6E8 /* MelanosightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7D72C9F2CF30005F6E8 /* MelanosightUITests.swift */; };
+		945BB7DA2C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7D92C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		945BB7CA2C9F2CF30005F6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945BB7B12C9F2CF10005F6E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945BB7B82C9F2CF10005F6E8;
+			remoteInfo = Melanosight;
+		};
+		945BB7D42C9F2CF30005F6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945BB7B12C9F2CF10005F6E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945BB7B82C9F2CF10005F6E8;
+			remoteInfo = Melanosight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		945BB7B92C9F2CF10005F6E8 /* Melanosight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melanosight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945BB7BC2C9F2CF10005F6E8 /* MelanosightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelanosightApp.swift; sourceTree = "<group>"; };
+		945BB7BE2C9F2CF10005F6E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		945BB7C02C9F2CF30005F6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		945BB7C32C9F2CF30005F6E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		945BB7C92C9F2CF30005F6E8 /* MelanosightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelanosightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		945BB7CD2C9F2CF30005F6E8 /* MelanosightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelanosightTests.swift; sourceTree = "<group>"; };
+		945BB7D32C9F2CF30005F6E8 /* MelanosightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelanosightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		945BB7D72C9F2CF30005F6E8 /* MelanosightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelanosightUITests.swift; sourceTree = "<group>"; };
+		945BB7D92C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelanosightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945BB7B62C9F2CF10005F6E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945BB7C62C9F2CF30005F6E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945BB7D02C9F2CF30005F6E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		945BB7B02C9F2CF10005F6E8 = {
+			isa = PBXGroup;
+			children = (
+				945BB7BB2C9F2CF10005F6E8 /* Melanosight */,
+				945BB7CC2C9F2CF30005F6E8 /* MelanosightTests */,
+				945BB7D62C9F2CF30005F6E8 /* MelanosightUITests */,
+				945BB7BA2C9F2CF10005F6E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		945BB7BA2C9F2CF10005F6E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945BB7B92C9F2CF10005F6E8 /* Melanosight.app */,
+				945BB7C92C9F2CF30005F6E8 /* MelanosightTests.xctest */,
+				945BB7D32C9F2CF30005F6E8 /* MelanosightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		945BB7BB2C9F2CF10005F6E8 /* Melanosight */ = {
+			isa = PBXGroup;
+			children = (
+				945BB7BC2C9F2CF10005F6E8 /* MelanosightApp.swift */,
+				945BB7BE2C9F2CF10005F6E8 /* ContentView.swift */,
+				945BB7C02C9F2CF30005F6E8 /* Assets.xcassets */,
+				945BB7C22C9F2CF30005F6E8 /* Preview Content */,
+			);
+			path = Melanosight;
+			sourceTree = "<group>";
+		};
+		945BB7C22C9F2CF30005F6E8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				945BB7C32C9F2CF30005F6E8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		945BB7CC2C9F2CF30005F6E8 /* MelanosightTests */ = {
+			isa = PBXGroup;
+			children = (
+				945BB7CD2C9F2CF30005F6E8 /* MelanosightTests.swift */,
+			);
+			path = MelanosightTests;
+			sourceTree = "<group>";
+		};
+		945BB7D62C9F2CF30005F6E8 /* MelanosightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				945BB7D72C9F2CF30005F6E8 /* MelanosightUITests.swift */,
+				945BB7D92C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift */,
+			);
+			path = MelanosightUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945BB7B82C9F2CF10005F6E8 /* Melanosight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945BB7DD2C9F2CF30005F6E8 /* Build configuration list for PBXNativeTarget "Melanosight" */;
+			buildPhases = (
+				945BB7B52C9F2CF10005F6E8 /* Sources */,
+				945BB7B62C9F2CF10005F6E8 /* Frameworks */,
+				945BB7B72C9F2CF10005F6E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Melanosight;
+			productName = Melanosight;
+			productReference = 945BB7B92C9F2CF10005F6E8 /* Melanosight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		945BB7C82C9F2CF30005F6E8 /* MelanosightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945BB7E02C9F2CF30005F6E8 /* Build configuration list for PBXNativeTarget "MelanosightTests" */;
+			buildPhases = (
+				945BB7C52C9F2CF30005F6E8 /* Sources */,
+				945BB7C62C9F2CF30005F6E8 /* Frameworks */,
+				945BB7C72C9F2CF30005F6E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945BB7CB2C9F2CF30005F6E8 /* PBXTargetDependency */,
+			);
+			name = MelanosightTests;
+			productName = MelanosightTests;
+			productReference = 945BB7C92C9F2CF30005F6E8 /* MelanosightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		945BB7D22C9F2CF30005F6E8 /* MelanosightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945BB7E32C9F2CF30005F6E8 /* Build configuration list for PBXNativeTarget "MelanosightUITests" */;
+			buildPhases = (
+				945BB7CF2C9F2CF30005F6E8 /* Sources */,
+				945BB7D02C9F2CF30005F6E8 /* Frameworks */,
+				945BB7D12C9F2CF30005F6E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945BB7D52C9F2CF30005F6E8 /* PBXTargetDependency */,
+			);
+			name = MelanosightUITests;
+			productName = MelanosightUITests;
+			productReference = 945BB7D32C9F2CF30005F6E8 /* MelanosightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		945BB7B12C9F2CF10005F6E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					945BB7B82C9F2CF10005F6E8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					945BB7C82C9F2CF30005F6E8 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 945BB7B82C9F2CF10005F6E8;
+					};
+					945BB7D22C9F2CF30005F6E8 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 945BB7B82C9F2CF10005F6E8;
+					};
+				};
+			};
+			buildConfigurationList = 945BB7B42C9F2CF10005F6E8 /* Build configuration list for PBXProject "Melanosight" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 945BB7B02C9F2CF10005F6E8;
+			productRefGroup = 945BB7BA2C9F2CF10005F6E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945BB7B82C9F2CF10005F6E8 /* Melanosight */,
+				945BB7C82C9F2CF30005F6E8 /* MelanosightTests */,
+				945BB7D22C9F2CF30005F6E8 /* MelanosightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		945BB7B72C9F2CF10005F6E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945BB7C42C9F2CF30005F6E8 /* Preview Assets.xcassets in Resources */,
+				945BB7C12C9F2CF30005F6E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945BB7C72C9F2CF30005F6E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945BB7D12C9F2CF30005F6E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945BB7B52C9F2CF10005F6E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945BB7BF2C9F2CF10005F6E8 /* ContentView.swift in Sources */,
+				945BB7BD2C9F2CF10005F6E8 /* MelanosightApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945BB7C52C9F2CF30005F6E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945BB7CE2C9F2CF30005F6E8 /* MelanosightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945BB7CF2C9F2CF30005F6E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945BB7DA2C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift in Sources */,
+				945BB7D82C9F2CF30005F6E8 /* MelanosightUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		945BB7CB2C9F2CF30005F6E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945BB7B82C9F2CF10005F6E8 /* Melanosight */;
+			targetProxy = 945BB7CA2C9F2CF30005F6E8 /* PBXContainerItemProxy */;
+		};
+		945BB7D52C9F2CF30005F6E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945BB7B82C9F2CF10005F6E8 /* Melanosight */;
+			targetProxy = 945BB7D42C9F2CF30005F6E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		945BB7DB2C9F2CF30005F6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		945BB7DC2C9F2CF30005F6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		945BB7DE2C9F2CF30005F6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Melanosight/Preview Content\"";
+				DEVELOPMENT_TEAM = TCQVK8VWPR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Suhaani.Melanosight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		945BB7DF2C9F2CF30005F6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Melanosight/Preview Content\"";
+				DEVELOPMENT_TEAM = TCQVK8VWPR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Suhaani.Melanosight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		945BB7E12C9F2CF30005F6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCQVK8VWPR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Suhaani.MelanosightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Melanosight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Melanosight";
+			};
+			name = Debug;
+		};
+		945BB7E22C9F2CF30005F6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCQVK8VWPR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Suhaani.MelanosightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Melanosight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Melanosight";
+			};
+			name = Release;
+		};
+		945BB7E42C9F2CF30005F6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCQVK8VWPR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Suhaani.MelanosightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Melanosight;
+			};
+			name = Debug;
+		};
+		945BB7E52C9F2CF30005F6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TCQVK8VWPR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Suhaani.MelanosightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Melanosight;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945BB7B42C9F2CF10005F6E8 /* Build configuration list for PBXProject "Melanosight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945BB7DB2C9F2CF30005F6E8 /* Debug */,
+				945BB7DC2C9F2CF30005F6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945BB7DD2C9F2CF30005F6E8 /* Build configuration list for PBXNativeTarget "Melanosight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945BB7DE2C9F2CF30005F6E8 /* Debug */,
+				945BB7DF2C9F2CF30005F6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945BB7E02C9F2CF30005F6E8 /* Build configuration list for PBXNativeTarget "MelanosightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945BB7E12C9F2CF30005F6E8 /* Debug */,
+				945BB7E22C9F2CF30005F6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945BB7E32C9F2CF30005F6E8 /* Build configuration list for PBXNativeTarget "MelanosightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945BB7E42C9F2CF30005F6E8 /* Debug */,
+				945BB7E52C9F2CF30005F6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 945BB7B12C9F2CF10005F6E8 /* Project object */;
+}
