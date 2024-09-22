@@ -14,6 +14,9 @@
 		945BB7CE2C9F2CF30005F6E8 /* MelanosightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7CD2C9F2CF30005F6E8 /* MelanosightTests.swift */; };
 		945BB7D82C9F2CF30005F6E8 /* MelanosightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7D72C9F2CF30005F6E8 /* MelanosightUITests.swift */; };
 		945BB7DA2C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7D92C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift */; };
+		945BB7E92C9F55E30005F6E8 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7E82C9F55E30005F6E8 /* Classifier.swift */; };
+		945BB7EB2C9F55F00005F6E8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7EA2C9F55F00005F6E8 /* Resources.swift */; };
+		945BB7ED2C9F566E0005F6E8 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7EC2C9F566E0005F6E8 /* About.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		945BB7D32C9F2CF30005F6E8 /* MelanosightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelanosightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		945BB7D72C9F2CF30005F6E8 /* MelanosightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelanosightUITests.swift; sourceTree = "<group>"; };
 		945BB7D92C9F2CF30005F6E8 /* MelanosightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelanosightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		945BB7E82C9F55E30005F6E8 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		945BB7EA2C9F55F00005F6E8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		945BB7EC2C9F566E0005F6E8 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				945BB7BC2C9F2CF10005F6E8 /* MelanosightApp.swift */,
 				945BB7BE2C9F2CF10005F6E8 /* ContentView.swift */,
+				945BB7EA2C9F55F00005F6E8 /* Resources.swift */,
+				945BB7E82C9F55E30005F6E8 /* Classifier.swift */,
+				945BB7EC2C9F566E0005F6E8 /* About.swift */,
 				945BB7C02C9F2CF30005F6E8 /* Assets.xcassets */,
 				945BB7C22C9F2CF30005F6E8 /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945BB7ED2C9F566E0005F6E8 /* About.swift in Sources */,
 				945BB7BF2C9F2CF10005F6E8 /* ContentView.swift in Sources */,
+				945BB7EB2C9F55F00005F6E8 /* Resources.swift in Sources */,
+				945BB7E92C9F55E30005F6E8 /* Classifier.swift in Sources */,
 				945BB7BD2C9F2CF10005F6E8 /* MelanosightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
