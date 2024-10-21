@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,6 +52,20 @@
 		945BB7EC2C9F566E0005F6E8 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		948DC49B2CC713260004B419 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"MelClass 1.mlmodel",
+			);
+			target = 945BB7B82C9F2CF10005F6E8 /* Melanosight */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		948DC4982CC712BE0004B419 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (948DC49B2CC713260004B419 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		945BB7B62C9F2CF10005F6E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -80,6 +94,7 @@
 		945BB7B02C9F2CF10005F6E8 = {
 			isa = PBXGroup;
 			children = (
+				948DC4982CC712BE0004B419 /* Models */,
 				945BB7BB2C9F2CF10005F6E8 /* Melanosight */,
 				945BB7CC2C9F2CF30005F6E8 /* MelanosightTests */,
 				945BB7D62C9F2CF30005F6E8 /* MelanosightUITests */,

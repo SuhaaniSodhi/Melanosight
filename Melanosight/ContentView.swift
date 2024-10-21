@@ -33,7 +33,7 @@ struct ContentView: View {
                         .foregroundColor(Color(red: 0.7, green: 0.4, blue: 0.8))
                         .padding(.bottom)
                     HStack{
-                        NavigationLink(destination: Classifier()) {
+                        NavigationLink(destination: Classifier().navigationBarBackButtonHidden(true)) {
                             // Action for Clarssfier button
                             Text("Classifier")
                                 .font(.title2)
@@ -48,9 +48,9 @@ struct ContentView: View {
                         }
                         
                         // Resoruces Button
-                        NavigationLink(destination: Resources()){
+                        NavigationLink(destination: Resources().navigationBarBackButtonHidden(true)){
                             // Action for Resoruces button
-                            Text("Resources")
+                            Text("Information")
                                 .font(.title2)
                                 .multilineTextAlignment(.center)
                                 .tint(Color(red: 0.897, green: 0.644, blue: 0.796))
@@ -62,7 +62,7 @@ struct ContentView: View {
                         }
                         
                     }
-                    NavigationLink(destination: About()) {
+                    NavigationLink(destination: About().navigationBarBackButtonHidden(true)) {
                         // Action for Find Out More button
                         Text("About Us")
                             .font(.title2)
@@ -76,6 +76,7 @@ struct ContentView: View {
                     }
                     Text("An inexpensive, accessible, and easy-to-use tool for preliminary melanoma screenings to increase awareness and access to healthcare!")
                         .font(.subheadline)
+                        .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
                         .multilineTextAlignment(.center)
                     Text("This app functions primarily as a preliminary. It does not replace a medical diagnosis.")
                         .font(.footnote)
