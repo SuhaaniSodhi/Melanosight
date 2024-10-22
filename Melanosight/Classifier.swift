@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import CoreML
 
 struct Classifier: View {
     
     @State private var Answer = ""
+    @State var isImagePickerShowing = false
+    
+    var imageClassifier: MelClass_1?
+    
+    init(){
+        do{
+            imageClassifier = try MelClass_1(configuration: <#T##MLModelConfiguration#>)
+        } catch{
+            print(error)
+        }
+    }
     
     var body: some View {
         NavigationView{
@@ -23,36 +35,24 @@ struct Classifier: View {
                         .font(.largeTitle)
                         .foregroundColor(Color(red: 0.7, green: 0.4, blue: 0.8))
                         .multilineTextAlignment(.center)
-                        .padding(.bottom)
+                        .padding([.leading, .bottom])
                     Text("Take or upload a picture of your suspicious lesions or moles to check for melanoma.")
                         .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
-                    
-                    func createImageClassifier() -> VNCoreMLModel {
-                        // Use a default model configuration.
-                        let defaultConfig = MLModelConfiguration()
-
-
-                        // Create an instance of the image classifier's wrapper class.
-                        let imageClassifierWrapper = try? MelClass_1(configuration: defaultConfig)
-
-
-                        guard let imageClassifier = imageClassifierWrapper else {
-                            fatalError("App failed to create an image classifier model instance.")
-                        }
-
-
-                        // Get the underlying model instance.
-                        let imageClassifierModel = imageClassifier.model
-
-
-                        // Create a Vision instance using the image classifier's model instance.
-                        guard let imageClassifierVisionModel = try? VNCoreMLModel(for: imageClassifierModel) else {
-                            fatalError("App failed to create a `VNCoreMLModel` instance.")
-                        }
-
-
-                       
                     }
+                HStack(){
+                    Button(action: {
+                        
+                    }) {
+                        Text("Upload a Photo")
+                    }
+                    Button(action: {
+                        
+                    }) {
+                        Text("Take a Photo")
+                    }
+
+                }.sheet(isPresented: <#T##Binding<Bool>#>, content: <#T##() -> View#>)
+                    .frame(width: 350.0)
                     Button(action: {
                         Answer = "Melanoma"
                     }) {
@@ -75,8 +75,7 @@ struct Classifier: View {
                         .padding(.top, 300.0)
                         .frame(width: 300.0, height: 400.0)
                         .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
-                }
-                .frame(width: 350.0)
+            }
                 
                 HStack(alignment: .bottom){
                     NavigationLink (destination: ContentView().navigationBarBackButtonHidden(true)){
@@ -103,7 +102,6 @@ struct Classifier: View {
         }
       
     }
-}
 
 #Preview {
     Classifier()

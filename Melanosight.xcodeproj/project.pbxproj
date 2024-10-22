@@ -17,6 +17,7 @@
 		945BB7E92C9F55E30005F6E8 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7E82C9F55E30005F6E8 /* Classifier.swift */; };
 		945BB7EB2C9F55F00005F6E8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7EA2C9F55F00005F6E8 /* Resources.swift */; };
 		945BB7ED2C9F566E0005F6E8 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7EC2C9F566E0005F6E8 /* About.swift */; };
+		948DC49D2CC738A10004B419 /* MelClass 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 948DC49C2CC738A10004B419 /* MelClass 1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,20 +51,11 @@
 		945BB7E82C9F55E30005F6E8 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		945BB7EA2C9F55F00005F6E8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		945BB7EC2C9F566E0005F6E8 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		948DC49C2CC738A10004B419 /* MelClass 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MelClass 1.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		948DC49B2CC713260004B419 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"MelClass 1.mlmodel",
-			);
-			target = 945BB7B82C9F2CF10005F6E8 /* Melanosight */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		948DC4982CC712BE0004B419 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (948DC49B2CC713260004B419 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+		948DC4982CC712BE0004B419 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +109,7 @@
 			children = (
 				945BB7BC2C9F2CF10005F6E8 /* MelanosightApp.swift */,
 				945BB7BE2C9F2CF10005F6E8 /* ContentView.swift */,
+				948DC49C2CC738A10004B419 /* MelClass 1.mlmodel */,
 				945BB7EA2C9F55F00005F6E8 /* Resources.swift */,
 				945BB7E82C9F55E30005F6E8 /* Classifier.swift */,
 				945BB7EC2C9F566E0005F6E8 /* About.swift */,
@@ -282,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				945BB7ED2C9F566E0005F6E8 /* About.swift in Sources */,
+				948DC49D2CC738A10004B419 /* MelClass 1.mlmodel in Sources */,
 				945BB7BF2C9F2CF10005F6E8 /* ContentView.swift in Sources */,
 				945BB7EB2C9F55F00005F6E8 /* Resources.swift in Sources */,
 				945BB7E92C9F55E30005F6E8 /* Classifier.swift in Sources */,
@@ -452,6 +446,7 @@
 				DEVELOPMENT_TEAM = TCQVK8VWPR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = Classification;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +476,7 @@
 				DEVELOPMENT_TEAM = TCQVK8VWPR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = Classification;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
