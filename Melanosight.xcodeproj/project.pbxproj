@@ -18,6 +18,7 @@
 		945BB7EB2C9F55F00005F6E8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7EA2C9F55F00005F6E8 /* Resources.swift */; };
 		945BB7ED2C9F566E0005F6E8 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945BB7EC2C9F566E0005F6E8 /* About.swift */; };
 		948DC49D2CC738A10004B419 /* MelClass 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 948DC49C2CC738A10004B419 /* MelClass 1.mlmodel */; };
+		94BA01FB2CC7571A00F3C99D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA01FA2CC7571300F3C99D /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		945BB7EA2C9F55F00005F6E8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		945BB7EC2C9F566E0005F6E8 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		948DC49C2CC738A10004B419 /* MelClass 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MelClass 1.mlmodel"; sourceTree = "<group>"; };
+		94BA01FA2CC7571300F3C99D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -112,6 +114,7 @@
 				948DC49C2CC738A10004B419 /* MelClass 1.mlmodel */,
 				945BB7EA2C9F55F00005F6E8 /* Resources.swift */,
 				945BB7E82C9F55E30005F6E8 /* Classifier.swift */,
+				94BA01FA2CC7571300F3C99D /* ImagePicker.swift */,
 				945BB7EC2C9F566E0005F6E8 /* About.swift */,
 				945BB7C02C9F2CF30005F6E8 /* Assets.xcassets */,
 				945BB7C22C9F2CF30005F6E8 /* Preview Content */,
@@ -208,7 +211,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					945BB7B82C9F2CF10005F6E8 = {
 						CreatedOnToolsVersion = 15.4;
@@ -277,6 +280,7 @@
 				945BB7ED2C9F566E0005F6E8 /* About.swift in Sources */,
 				948DC49D2CC738A10004B419 /* MelClass 1.mlmodel in Sources */,
 				945BB7BF2C9F2CF10005F6E8 /* ContentView.swift in Sources */,
+				94BA01FB2CC7571A00F3C99D /* ImagePicker.swift in Sources */,
 				945BB7EB2C9F55F00005F6E8 /* Resources.swift in Sources */,
 				945BB7E92C9F55E30005F6E8 /* Classifier.swift in Sources */,
 				945BB7BD2C9F2CF10005F6E8 /* MelanosightApp.swift in Sources */,
@@ -498,7 +502,6 @@
 		945BB7E12C9F2CF30005F6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -518,7 +521,6 @@
 		945BB7E22C9F2CF30005F6E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -538,7 +540,6 @@
 		945BB7E42C9F2CF30005F6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TCQVK8VWPR;
@@ -556,7 +557,6 @@
 		945BB7E52C9F2CF30005F6E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TCQVK8VWPR;
