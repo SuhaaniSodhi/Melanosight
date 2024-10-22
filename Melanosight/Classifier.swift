@@ -13,17 +13,10 @@ struct Classifier: View {
     @State private var Answer = ""
     @State var isImagePickerShowing = false
     @State var selectedImage: UIImage?
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     var imageClassifier: MelClass_1?
-    
-    init(){
-        do{
-            imageClassifier = try MelClass_1(configuration: <#T##MLModelConfiguration#>)
-        } catch{
-            print(error)
-        }
-    }
-    
+        
     var body: some View {
         NavigationView{
             ZStack{
@@ -48,6 +41,7 @@ struct Classifier: View {
                     
                     HStack(){
                         Button(action: {
+                            self.sourceType = .photoLibrary
                             isImagePickerShowing = true
                         }) {
                             Text("Upload a Photo")
@@ -86,8 +80,8 @@ struct Classifier: View {
                         .frame(width: 300.0, height: 400.0)
                         .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
                 }
-                .sheet(isPresented: $isImagePickerShowing){
-                         ImagePicker(selectedImage: $selectedImage, isImagePickerShowing: $isImagePickerShowing)
+                .sheet(isPresented: $isImagePickerShowing) {
+                    ImagePicker(selectedImage: $selectedImage, isImagePickerShowing: $isImagePickerShowing, sourceType: self.sourceType)
                 }
                
                 HStack(alignment: .bottom){
