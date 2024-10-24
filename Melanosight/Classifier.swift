@@ -8,6 +8,30 @@
 import SwiftUI
 import CoreML
 
+extension UIImage {
+    func toCVPixelBuffer() -> CVPixelBuffer? {
+        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+        var pixelBuffer : CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(self.size.width), Int (self.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+        guard (status == kCVReturnSuccess) else {
+            return nil
+        }
+        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+        
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(data: pixelData, width: Int(self.size.width), height: Int (self.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo:
+        CGImageAlphaInfo.noneSkipFirst.rawValue)
+        
+        context?.translateBy(x: 0, y: self.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        
+        UIGraphicsPushContext(context!)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        UIGraphicsPopContext()
+        CVPixelBufferUnlockBaseAddress (pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+    }
+}
 
 struct Classifier: View {
     
@@ -18,7 +42,13 @@ struct Classifier: View {
     
     var imageClassifier: MelClass_1?
   
-    
+    init(){
+        do{
+            imageClassifier = try MelClass_1(configuration: <#T##MLModelConfiguration#>)
+        } catch{
+            print(error)
+        }
+    }
 
     var body: some View {
         NavigationView{
@@ -28,18 +58,21 @@ struct Classifier: View {
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
                 VStack(){
+                    Text("Welcome to our Melanoma Classifier!")
+                        .font(.largeTitle)
+                        .foregroundColor(Color(red: 0.7, green: 0.4, blue: 0.8))
+                        .multilineTextAlignment(.center)
+                        .padding([.leading, .bottom])
+                        .frame(width: 400.0)
                   
                     Text("Take or upload a picture of your suspicious lesions or moles to check for melanoma.")
                         .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
-                        .multilineTextAlignment(.center)
-                        .padding(.top)
-                        .frame(width: 250.0, height: 90.0)
-                        
+                        .padding(.vertical)
+                        .frame(width: 400.0)
                   
                     Image(uiImage: selectedImage ?? UIImage(named: "Camera")!)
-                        .padding()
                         .frame(width: 225.0, height: 225.0)
-                    
+               
                     HStack(){
                         Button(action: {
                             self.sourceType = .photoLibrary
@@ -58,9 +91,18 @@ struct Classifier: View {
                     .frame(width: 350.0)
                   
                     Button(action: {
-                        Answer = " Not Melanoma"
-                    }
-                        ) {
+                        guard let uiImage = UIImage(named: "yourImageNameHere") else{
+                            return
+                        }
+                        
+                        guard let pixelBuffer = selectedImage?.toCVPixelBuffer() else { return }
+                        do {
+                            let result = try imageClassifier!.prediction(image: pixelBuffer)
+                            Answer = result?.classLabel??
+                        } catch{
+                            print(error)
+                        }
+                    }) {
                         Text("Classify!")
                             .font(.title2)
                             .padding()
@@ -72,10 +114,7 @@ struct Classifier: View {
                     }
                     if !Answer.isEmpty {
                         HStack{
-                            Text(Answer)
-                                .fontWeight(.bold)
-                                .multilineTextAlignment(.center)
-                                .padding()
+                            Text(Answer) .multilineTextAlignment(.center)  .padding()
                         }
                     }
                  
@@ -112,11 +151,8 @@ struct Classifier: View {
                             .multilineTextAlignment(.center)
                     }
                 }
-                .padding(.top, 300.0)
-               
+                .padding(.top)
             }
-            
-            
         }
     }
     }

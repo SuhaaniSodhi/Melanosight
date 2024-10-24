@@ -34,9 +34,11 @@ struct About: View {
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color(red: 0.272, green: 0.022, blue: 0.181))
-                            Text("Suhaani is a senior in high school and an Arizona resident. She first hand has seen the effects of Melanoma and hopes to combat them by raising healthcare acesibility through MelanoSight!")
+                            Text("Suhaani is a senior in high school and an Arizona resident. Almost 8 thousand people passed away from melanoma in 2023. However, most of their deaths could’ve been prevented, as Melanoma has almost a 95% survival rate if found earlier.")
                                 .foregroundColor(Color(red: 0.272, green: 0.022, blue: 0.181))
-                                .frame(width: 200.0)
+                                .multilineTextAlignment(.center)
+                                .frame(width: 230.0)
+                                
                         }
                     }
                    
@@ -44,6 +46,9 @@ struct About: View {
                         .font(.headline)
                                    .foregroundColor(.blue)
                                    .padding()
+                        
+                        
+                        
                 }
                 .padding(.bottom, 250.0)
                 HStack(alignment: .bottom){

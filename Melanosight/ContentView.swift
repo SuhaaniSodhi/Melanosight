@@ -4,158 +4,94 @@
 //
 //  Created by Suhaani Sodhi on 9/21/24.
 //
-import SwiftUI
-import CoreML
 
-extension UIImage {
-    func toCVPixelBuffer() -> CVPixelBuffer? {
-        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
-        var pixelBuffer : CVPixelBuffer?
-        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(self.size.width), Int (self.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
-        guard (status == kCVReturnSuccess) else {
-            return nil
-        }
-        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-        
-        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-        let context = CGContext(data: pixelData, width: Int(self.size.width), height: Int (self.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo:
-        CGImageAlphaInfo.noneSkipFirst.rawValue)
-        
-        context?.translateBy(x: 0, y: self.size.height)
-        context?.scaleBy(x: 1.0, y: -1.0)
-        
-        UIGraphicsPushContext(context!)
-        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
-        UIGraphicsPopContext()
-        CVPixelBufferUnlockBaseAddress (pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-    }
-}
+import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var Answer = ""
-    @State var isImagePickerShowing = false
-    @State var selectedImage: UIImage?
-    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    
-    var imageClassifier: MelClass_1?
-  
-    init(){
-        do{
-            imageClassifier = try MelClass_1(configuration: <#T##MLModelConfiguration#>)
-        } catch{
-            print(error)
-        }
-    }
-
     var body: some View {
         NavigationView{
             ZStack{
                 Image("beige")
                     .resizable()
                     .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                VStack(){
-                    Text("Welcome to our Melanoma Classifier!")
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                VStack (spacing: 20){
+                    
+                    Image("MelanoSight")
+                        .frame(height: 200.0)
+                        .padding(.bottom, 550)
+                        .scaledToFill() // Scale the image to fill the width
+                        .clipped()  // Clip any overflowing content from the scaled image
+                        .edgesIgnoringSafeArea(.top)
+                }
+                VStack (spacing: 20){
+                    Text(" Welcome To:")
+                        .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
+                        .padding(.top, 200)
+                    Text("MelanoSight")
                         .font(.largeTitle)
                         .foregroundColor(Color(red: 0.7, green: 0.4, blue: 0.8))
-                        .multilineTextAlignment(.center)
-                        .padding([.leading, .bottom])
-                        .frame(width: 400.0)
-                  
-                    Text("Take or upload a picture of your suspicious lesions or moles to check for melanoma.")
-                        .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
-                        .padding(.vertical)
-                        .frame(width: 400.0)
-                  
-                    Image(uiImage: selectedImage ?? UIImage(named: "Camera")!)
-                        .frame(width: 225.0, height: 225.0)
-               
-                    HStack(){
-                        Button(action: {
-                            self.sourceType = .photoLibrary
-                            isImagePickerShowing = true
-                        }) {
-                            Text("Upload a Photo")
+                        .padding(.bottom)
+                    HStack{
+                        NavigationLink(destination: Classifier()) {
+                            // Action for Clarssfier button
+                            Text("Classifier")
+                                .font(.title2)
+                                .buttonStyle(.borderedProminent)
+                                .tint(Color(red: 0.897, green: 0.644, blue: 0.796))
+                                .foregroundColor(Color(red: 0.498, green: 0.02, blue: 0.371))
+                                .multilineTextAlignment(.center)
+                                .cornerRadius(25)
+                                .frame(maxWidth: .infinity)
+                            Spacer()
+                            
                         }
-                      
-                        Button(action: {
-                            isImagePickerShowing = true
-                        }) {
-                            Text("Take a Photo")
+                        
+                        // Resoruces Button
+                        NavigationLink(destination: Resources()){
+                            // Action for Resoruces button
+                            Text("Resources")
+                                .font(.title2)
+                                .multilineTextAlignment(.center)
+                                .tint(Color(red: 0.897, green: 0.644, blue: 0.796))
+                                .foregroundColor(Color(red: 0.498, green: 0.02, blue: 0.371))
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.white)
+                                .cornerRadius(25)
+                                .padding(.horizontal)
                         }
                         
                     }
-                    .frame(width: 350.0)
-                  
-                    Button(action: {
-                        guard let uiImage = UIImage(named: "Camera") else{
-                            return
-                        }
-                        
-                        guard let pixelBuffer = selectedImage?.toCVPixelBuffer() else { return }
-                        do {
-                            let result = try imageClassifier!.prediction(image: pixelBuffer)
-                            Answer = result?.classLabel??
-                        } catch{
-                            print(error)
-                        }
-                    }) {
-                        Text("Classify!")
+                    NavigationLink(destination: About()) {
+                        // Action for Find Out More button
+                        Text("About Us")
                             .font(.title2)
-                            .padding()
-                            .frame(width: 150.0)
-                            .background(Color.purple)
+                            .multilineTextAlignment(.center)
+                            .tint(Color(red: 0.897, green: 0.644, blue: 0.796))
+                            .foregroundColor(Color(red: 0.498, green: 0.02, blue: 0.371))
+                            .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .cornerRadius(25)
                             .padding(.horizontal)
                     }
-                    if !Answer.isEmpty {
-                        HStack{
-                            Text(Answer) .multilineTextAlignment(.center)  .padding()
-                        }
-                    }
-                 
-                    Text("The database for the image classifing model was aquired from the International Skin Imaging Collaboration, 2024")
-                        .font(.caption2)
-                        .padding(.top, 300.0)
-                        .frame(width: 300.0, height: 400.0)
-                        .foregroundColor(Color(red: 0.271, green: 0.022, blue: 0.181))
+                    Text("An inexpensive, accessible, and easy-to-use tool for preliminary melanoma screenings to increase awareness and access to healthcare!")
+                        .font(.subheadline)
+                        .multilineTextAlignment(.center)
+                    Text("This app functions primarily as a preliminary. It does not replace a medical diagnosis.")
+                        .font(.footnote)
+                        .fontWeight(.black)
+                        .foregroundColor(Color(red: 0.704, green: 0.401, blue: 0.798))
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 100.0)
                 }
-                .sheet(isPresented: $isImagePickerShowing) {
-                    ImagePicker(selectedImage: $selectedImage, isImagePickerShowing: $isImagePickerShowing, sourceType: self.sourceType)
-                }
-               
-                HStack(alignment: .bottom){
-                   
-                    NavigationLink (destination: ContentView().navigationBarBackButtonHidden(true)){
-                        Text("Home")
-                            .font(.title3)
-                            .foregroundColor(Color(red: 0.494, green: 0.02, blue: 0.371))
-                            .multilineTextAlignment(.center)
-                    }
-                   
-                    NavigationLink (destination: Resources().navigationBarBackButtonHidden(true)){
-                        Text("Information")
-                            .font(.title3)
-                            .foregroundColor(Color(red: 0.494, green: 0.02, blue: 0.371))
-                            .multilineTextAlignment(.center)
-                    }
-                  
-                    NavigationLink (destination: About().navigationBarBackButtonHidden(true)){
-                        Text("About Us")
-                            .font(.title3)
-                            .foregroundColor(Color(red: 0.494, green: 0.02, blue: 0.371))
-                            .multilineTextAlignment(.center)
-                    }
-                }
-                .padding(.top)
+                .frame(width: 300.0)
+                Spacer()
+                
             }
         }
     }
-    }
-
+    
+}
 #Preview {
-    Classifier()
+    ContentView()
 }
