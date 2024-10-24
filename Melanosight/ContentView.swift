@@ -32,7 +32,7 @@ extension UIImage {
     }
 }
 
-struct Classifier: View {
+struct ContentView: View {
     
     @State private var Answer = ""
     @State var isImagePickerShowing = false
